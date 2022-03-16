@@ -89,4 +89,4 @@ Type `yes` to destroy the infrastructure. Terraform will destroy the resources y
 ## Next steps
 That's it! You've just created and destroyed your first infastructure with Terraform!
 
-To learn how to create real infrastructures with your preferred cloud provider, see the [Terraform] Get Started (https://learn.hashicorp.com/terraform)  documentation.
+To learn how to create real infrastructures with your preferred cloud provider, see the Terraform [Get Started](https://learn.hashicorp.com/terraform) documentation.
