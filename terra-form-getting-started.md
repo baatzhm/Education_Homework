@@ -1,12 +1,26 @@
 # Getting Started with Terraform
 
-Terraform is the most popular langauge for defining and provisioning infrastructure as code (IaC).
+Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files. Get Started here.
 
-To install Terraform, simply visit [Terraform.io](https://www.terraform.io/downloads.html) and download the compressed binary application executable file deliverable for your platform, machine or environment on which you like to run code and do development.
+## Prerequisites
 
-With Terraform installed, let's dive right into it and start creating some infrastructure.
+- Terraform **version 1.1.7** or later
+- [Kubernetes comand-line interface (CLI)](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+- [Minikube](https://minikube.sigs.k8s.io)
 
-Most guys find it easiest to create a new directory on there local machine and create Terraform configuration code inside it.
+## Install Terraform
+The first step to getting started with Terraform is to get it installed. 
+
+To install Terraform, find the [appropriate package](https://www.terraform.io/downloads.html) for your platform, machine or environment and download it. Terraform is packaged as a zip archive.
+
+After downloading Terraform, unzip the package. Terraform runs as a single binary named `terraform`.
+
+Finally, make sure that the `terraform` binary is available on your`PATH`. This process will vary depending on your operating system.
+
+## Build Infrastructure
+With Terraform installed, you are ready to build your first infrastructure.
+
+We recommend creating a new directory on your local machine. Create a Terraform configuration code inside the directory.
 
 ```shell
 $ mkdir terraform-demo
@@ -45,24 +59,34 @@ resource "docker_image" "nginx" {
 }
 ```
 
-Initialize Terraform with the `init` command. The AWS provider will be installed. 
+Initialize Terraform with the `terraform init` command. The AWS provider will be installed. 
 
 ```shell
 $ terraform init
 ```
 
-You shoud check for any errors. If it ran successfully, provision the resource with the `apply` command.
+Check that your configuration is error-free. If your configuration is valid, Terraform will return a success message.
+
+Provision your resource with the `terraform apply` command.
 
 ```shell
 $ terraform apply
 ```
 
-The command will take up to a few minutes to run and will display a message indicating that the resource was created.
+The command will take a few minutes to run. Once complete, a message will display indicating that the resource was created.
 
-Finally, destroy the infrastructure.
+## Destroy Infastructure
+Now that you have succesfully created infastructure with Terraform, you will use Terraform to destroy this infrastructure.
 
 ```shell
 $ terraform destroy
 ```
 
-Look for a message are the bottom of the output asking for confirmation. Type `yes` and hit ENTER. Terraform will destroy the resources it had created earlier.
+Type `yes` to destroy the infrastructure. Terraform will destroy the resources you created earlier.
+
+
+
+## Next steps
+That's it! You've just created and destroyed your first infastructure with Terraform!
+
+To learn how to create real infrastructures with your preferred cloud provider, see the [Terraform] Get Started (https://learn.hashicorp.com/terraform)  documentation.
