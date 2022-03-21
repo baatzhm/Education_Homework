@@ -1,6 +1,6 @@
 # Getting Started with Terraform
 
-Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files. This guide walks you through how to get started with Terraform, deploying and destroying nginx infrastructure inside of a Docker container.
+Terraform is an open-source infrastructure as code software tool that provides a consistent CLI workflow to manage hundreds of cloud services. Terraform codifies cloud APIs into declarative configuration files. This guide walks you through how to get started with Terraform, by deploying and destroying nginx infrastructure inside of a Docker container.
 
 ## Prerequisites
 
@@ -11,7 +11,7 @@ Terraform is an open-source infrastructure as code software tool that provides a
 ## Install Terraform
 The first step to getting started with Terraform is to get it installed. HashiCorp distributes Terraform as a [binary package](https://www.terraform.io/downloads.html). You can also install Terraform using popular package managers. 
 
-For more detail about installation options, see [install terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli)
+For more detail about installation options, see [Install Terraform](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
 ## Build Infrastructure
 With Terraform installed, you are ready to build your first infrastructure.
@@ -29,7 +29,7 @@ Next, create a file for your Terraform configuration code.
 $ touch main.tf
 ```
 
-Paste the following into the file.
+Paste the following into the file:
 
 ```hcl
 terraform {
@@ -72,7 +72,7 @@ $ terraform apply
 The command will take a few minutes to run. Once complete, a message will display indicating that the resource was created. 
 
 ## Destroy Infrastructure
-Now that you have succesfully created infrastructure with Terraform, you will use Terraform to destroy this infrastructure.
+Now that you have successfully created infrastructure with Terraform, you will use Terraform to destroy this infrastructure.
 
 ```shell
 $ terraform destroy
@@ -83,6 +83,6 @@ Review the output. Type `yes` to destroy the infrastructure. Terraform will dest
 
 
 ## Next steps
-That's it! You've just created and destroyed your first infastructure with Terraform.
+That's it! You've just created and destroyed your first infrastructure with Terraform.
 
 To learn how to create real infrastructures with your preferred cloud provider, see the Terraform [Get Started](https://learn.hashicorp.com/terraform) documentation.
